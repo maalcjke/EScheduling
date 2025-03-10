@@ -1,0 +1,4 @@
+export enum AccessType {
+    AUTHORIZED = 'AUTHORIZED',
+    UNAUTHORIZED = 'UNAUTHORIZED'
+}
