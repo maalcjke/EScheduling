@@ -1265,6 +1265,8 @@ export namespace Prisma {
     email: string | null
     password: string | null
     avatar: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -1272,6 +1274,8 @@ export namespace Prisma {
     email: string | null
     password: string | null
     avatar: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -1279,6 +1283,8 @@ export namespace Prisma {
     email: number
     password: number
     avatar: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -1296,6 +1302,8 @@ export namespace Prisma {
     email?: true
     password?: true
     avatar?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -1303,6 +1311,8 @@ export namespace Prisma {
     email?: true
     password?: true
     avatar?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -1310,6 +1320,8 @@ export namespace Prisma {
     email?: true
     password?: true
     avatar?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -1404,6 +1416,8 @@ export namespace Prisma {
     email: string
     password: string
     avatar: string | null
+    createdAt: Date
+    updatedAt: Date
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1430,6 +1444,8 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     avatar?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     Calendar?: boolean | User$CalendarArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
@@ -1439,6 +1455,8 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     avatar?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1446,6 +1464,8 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     avatar?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1453,9 +1473,11 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     avatar?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "password" | "avatar", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "password" | "avatar" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Calendar?: boolean | User$CalendarArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1473,6 +1495,8 @@ export namespace Prisma {
       email: string
       password: string
       avatar: string | null
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1901,6 +1925,8 @@ export namespace Prisma {
     readonly email: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
     readonly avatar: FieldRef<"User", 'String'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
     
 
@@ -2356,6 +2382,8 @@ export namespace Prisma {
     link: string | null
     access: boolean | null
     onwerId: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type CalendarMaxAggregateOutputType = {
@@ -2363,6 +2391,8 @@ export namespace Prisma {
     link: string | null
     access: boolean | null
     onwerId: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type CalendarCountAggregateOutputType = {
@@ -2370,6 +2400,8 @@ export namespace Prisma {
     link: number
     access: number
     onwerId: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -2387,6 +2419,8 @@ export namespace Prisma {
     link?: true
     access?: true
     onwerId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type CalendarMaxAggregateInputType = {
@@ -2394,6 +2428,8 @@ export namespace Prisma {
     link?: true
     access?: true
     onwerId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type CalendarCountAggregateInputType = {
@@ -2401,6 +2437,8 @@ export namespace Prisma {
     link?: true
     access?: true
     onwerId?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -2495,6 +2533,8 @@ export namespace Prisma {
     link: string
     access: boolean
     onwerId: number
+    createdAt: Date
+    updatedAt: Date
     _count: CalendarCountAggregateOutputType | null
     _avg: CalendarAvgAggregateOutputType | null
     _sum: CalendarSumAggregateOutputType | null
@@ -2521,6 +2561,8 @@ export namespace Prisma {
     link?: boolean
     access?: boolean
     onwerId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
     Event?: boolean | Calendar$EventArgs<ExtArgs>
     eventType?: boolean | Calendar$eventTypeArgs<ExtArgs>
@@ -2532,6 +2574,8 @@ export namespace Prisma {
     link?: boolean
     access?: boolean
     onwerId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["calendar"]>
 
@@ -2540,6 +2584,8 @@ export namespace Prisma {
     link?: boolean
     access?: boolean
     onwerId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     owner?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["calendar"]>
 
@@ -2548,9 +2594,11 @@ export namespace Prisma {
     link?: boolean
     access?: boolean
     onwerId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type CalendarOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "link" | "access" | "onwerId", ExtArgs["result"]["calendar"]>
+  export type CalendarOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "link" | "access" | "onwerId" | "createdAt" | "updatedAt", ExtArgs["result"]["calendar"]>
   export type CalendarInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     owner?: boolean | UserDefaultArgs<ExtArgs>
     Event?: boolean | Calendar$EventArgs<ExtArgs>
@@ -2576,6 +2624,8 @@ export namespace Prisma {
       link: string
       access: boolean
       onwerId: number
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["calendar"]>
     composites: {}
   }
@@ -3006,6 +3056,8 @@ export namespace Prisma {
     readonly link: FieldRef<"Calendar", 'String'>
     readonly access: FieldRef<"Calendar", 'Boolean'>
     readonly onwerId: FieldRef<"Calendar", 'Int'>
+    readonly createdAt: FieldRef<"Calendar", 'DateTime'>
+    readonly updatedAt: FieldRef<"Calendar", 'DateTime'>
   }
     
 
@@ -3498,6 +3550,8 @@ export namespace Prisma {
     duration: number | null
     eventTypeId: number | null
     calendarId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type EventMaxAggregateOutputType = {
@@ -3508,6 +3562,8 @@ export namespace Prisma {
     duration: number | null
     eventTypeId: number | null
     calendarId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type EventCountAggregateOutputType = {
@@ -3518,6 +3574,8 @@ export namespace Prisma {
     duration: number
     eventTypeId: number
     calendarId: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -3540,6 +3598,8 @@ export namespace Prisma {
     duration?: true
     eventTypeId?: true
     calendarId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type EventMaxAggregateInputType = {
@@ -3550,6 +3610,8 @@ export namespace Prisma {
     duration?: true
     eventTypeId?: true
     calendarId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type EventCountAggregateInputType = {
@@ -3560,6 +3622,8 @@ export namespace Prisma {
     duration?: true
     eventTypeId?: true
     calendarId?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -3657,6 +3721,8 @@ export namespace Prisma {
     duration: number
     eventTypeId: number
     calendarId: string
+    createdAt: Date
+    updatedAt: Date
     _count: EventCountAggregateOutputType | null
     _avg: EventAvgAggregateOutputType | null
     _sum: EventSumAggregateOutputType | null
@@ -3686,6 +3752,8 @@ export namespace Prisma {
     duration?: boolean
     eventTypeId?: boolean
     calendarId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     eventType?: boolean | EventTypeDefaultArgs<ExtArgs>
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["event"]>
@@ -3698,6 +3766,8 @@ export namespace Prisma {
     duration?: boolean
     eventTypeId?: boolean
     calendarId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     eventType?: boolean | EventTypeDefaultArgs<ExtArgs>
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["event"]>
@@ -3710,6 +3780,8 @@ export namespace Prisma {
     duration?: boolean
     eventTypeId?: boolean
     calendarId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     eventType?: boolean | EventTypeDefaultArgs<ExtArgs>
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["event"]>
@@ -3722,9 +3794,11 @@ export namespace Prisma {
     duration?: boolean
     eventTypeId?: boolean
     calendarId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type EventOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "date" | "duration" | "eventTypeId" | "calendarId", ExtArgs["result"]["event"]>
+  export type EventOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "date" | "duration" | "eventTypeId" | "calendarId" | "createdAt" | "updatedAt", ExtArgs["result"]["event"]>
   export type EventInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     eventType?: boolean | EventTypeDefaultArgs<ExtArgs>
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
@@ -3752,6 +3826,8 @@ export namespace Prisma {
       duration: number
       eventTypeId: number
       calendarId: string
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["event"]>
     composites: {}
   }
@@ -4184,6 +4260,8 @@ export namespace Prisma {
     readonly duration: FieldRef<"Event", 'Int'>
     readonly eventTypeId: FieldRef<"Event", 'Int'>
     readonly calendarId: FieldRef<"Event", 'String'>
+    readonly createdAt: FieldRef<"Event", 'DateTime'>
+    readonly updatedAt: FieldRef<"Event", 'DateTime'>
   }
     
 
@@ -4622,18 +4700,24 @@ export namespace Prisma {
     id: number | null
     calendarId: string | null
     title: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type EventTypeMaxAggregateOutputType = {
     id: number | null
     calendarId: string | null
     title: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type EventTypeCountAggregateOutputType = {
     id: number
     calendarId: number
     title: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -4650,18 +4734,24 @@ export namespace Prisma {
     id?: true
     calendarId?: true
     title?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type EventTypeMaxAggregateInputType = {
     id?: true
     calendarId?: true
     title?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type EventTypeCountAggregateInputType = {
     id?: true
     calendarId?: true
     title?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -4755,6 +4845,8 @@ export namespace Prisma {
     id: number
     calendarId: string
     title: string
+    createdAt: Date
+    updatedAt: Date
     _count: EventTypeCountAggregateOutputType | null
     _avg: EventTypeAvgAggregateOutputType | null
     _sum: EventTypeSumAggregateOutputType | null
@@ -4780,6 +4872,8 @@ export namespace Prisma {
     id?: boolean
     calendarId?: boolean
     title?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
     Event?: boolean | EventType$EventArgs<ExtArgs>
     _count?: boolean | EventTypeCountOutputTypeDefaultArgs<ExtArgs>
@@ -4789,6 +4883,8 @@ export namespace Prisma {
     id?: boolean
     calendarId?: boolean
     title?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["eventType"]>
 
@@ -4796,6 +4892,8 @@ export namespace Prisma {
     id?: boolean
     calendarId?: boolean
     title?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["eventType"]>
 
@@ -4803,9 +4901,11 @@ export namespace Prisma {
     id?: boolean
     calendarId?: boolean
     title?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type EventTypeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "calendarId" | "title", ExtArgs["result"]["eventType"]>
+  export type EventTypeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "calendarId" | "title" | "createdAt" | "updatedAt", ExtArgs["result"]["eventType"]>
   export type EventTypeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     calendar?: boolean | CalendarDefaultArgs<ExtArgs>
     Event?: boolean | EventType$EventArgs<ExtArgs>
@@ -4828,6 +4928,8 @@ export namespace Prisma {
       id: number
       calendarId: string
       title: string
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["eventType"]>
     composites: {}
   }
@@ -5256,6 +5358,8 @@ export namespace Prisma {
     readonly id: FieldRef<"EventType", 'Int'>
     readonly calendarId: FieldRef<"EventType", 'String'>
     readonly title: FieldRef<"EventType", 'String'>
+    readonly createdAt: FieldRef<"EventType", 'DateTime'>
+    readonly updatedAt: FieldRef<"EventType", 'DateTime'>
   }
     
 
@@ -5712,7 +5816,9 @@ export namespace Prisma {
     id: 'id',
     email: 'email',
     password: 'password',
-    avatar: 'avatar'
+    avatar: 'avatar',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -5722,7 +5828,9 @@ export namespace Prisma {
     id: 'id',
     link: 'link',
     access: 'access',
-    onwerId: 'onwerId'
+    onwerId: 'onwerId',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type CalendarScalarFieldEnum = (typeof CalendarScalarFieldEnum)[keyof typeof CalendarScalarFieldEnum]
@@ -5735,7 +5843,9 @@ export namespace Prisma {
     date: 'date',
     duration: 'duration',
     eventTypeId: 'eventTypeId',
-    calendarId: 'calendarId'
+    calendarId: 'calendarId',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type EventScalarFieldEnum = (typeof EventScalarFieldEnum)[keyof typeof EventScalarFieldEnum]
@@ -5744,7 +5854,9 @@ export namespace Prisma {
   export const EventTypeScalarFieldEnum: {
     id: 'id',
     calendarId: 'calendarId',
-    title: 'title'
+    title: 'title',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type EventTypeScalarFieldEnum = (typeof EventTypeScalarFieldEnum)[keyof typeof EventTypeScalarFieldEnum]
@@ -5808,13 +5920,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Boolean'
-   */
-  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
-    
-
-
-  /**
    * Reference to a field of type 'DateTime'
    */
   export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
@@ -5825,6 +5930,13 @@ export namespace Prisma {
    * Reference to a field of type 'DateTime[]'
    */
   export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -5853,6 +5965,8 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     avatar?: StringNullableFilter<"User"> | string | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
     Calendar?: CalendarListRelationFilter
   }
 
@@ -5861,6 +5975,8 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     avatar?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     Calendar?: CalendarOrderByRelationAggregateInput
   }
 
@@ -5872,6 +5988,8 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     avatar?: StringNullableFilter<"User"> | string | null
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
     Calendar?: CalendarListRelationFilter
   }, "id">
 
@@ -5880,6 +5998,8 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     avatar?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -5895,6 +6015,8 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
     avatar?: StringNullableWithAggregatesFilter<"User"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
   export type CalendarWhereInput = {
@@ -5905,6 +6027,8 @@ export namespace Prisma {
     link?: StringFilter<"Calendar"> | string
     access?: BoolFilter<"Calendar"> | boolean
     onwerId?: IntFilter<"Calendar"> | number
+    createdAt?: DateTimeFilter<"Calendar"> | Date | string
+    updatedAt?: DateTimeFilter<"Calendar"> | Date | string
     owner?: XOR<UserScalarRelationFilter, UserWhereInput>
     Event?: EventListRelationFilter
     eventType?: EventTypeListRelationFilter
@@ -5915,6 +6039,8 @@ export namespace Prisma {
     link?: SortOrder
     access?: SortOrder
     onwerId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     owner?: UserOrderByWithRelationInput
     Event?: EventOrderByRelationAggregateInput
     eventType?: EventTypeOrderByRelationAggregateInput
@@ -5928,6 +6054,8 @@ export namespace Prisma {
     NOT?: CalendarWhereInput | CalendarWhereInput[]
     access?: BoolFilter<"Calendar"> | boolean
     onwerId?: IntFilter<"Calendar"> | number
+    createdAt?: DateTimeFilter<"Calendar"> | Date | string
+    updatedAt?: DateTimeFilter<"Calendar"> | Date | string
     owner?: XOR<UserScalarRelationFilter, UserWhereInput>
     Event?: EventListRelationFilter
     eventType?: EventTypeListRelationFilter
@@ -5938,6 +6066,8 @@ export namespace Prisma {
     link?: SortOrder
     access?: SortOrder
     onwerId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: CalendarCountOrderByAggregateInput
     _avg?: CalendarAvgOrderByAggregateInput
     _max?: CalendarMaxOrderByAggregateInput
@@ -5953,6 +6083,8 @@ export namespace Prisma {
     link?: StringWithAggregatesFilter<"Calendar"> | string
     access?: BoolWithAggregatesFilter<"Calendar"> | boolean
     onwerId?: IntWithAggregatesFilter<"Calendar"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Calendar"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Calendar"> | Date | string
   }
 
   export type EventWhereInput = {
@@ -5966,6 +6098,8 @@ export namespace Prisma {
     duration?: IntFilter<"Event"> | number
     eventTypeId?: IntFilter<"Event"> | number
     calendarId?: StringFilter<"Event"> | string
+    createdAt?: DateTimeFilter<"Event"> | Date | string
+    updatedAt?: DateTimeFilter<"Event"> | Date | string
     eventType?: XOR<EventTypeScalarRelationFilter, EventTypeWhereInput>
     calendar?: XOR<CalendarScalarRelationFilter, CalendarWhereInput>
   }
@@ -5978,6 +6112,8 @@ export namespace Prisma {
     duration?: SortOrder
     eventTypeId?: SortOrder
     calendarId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     eventType?: EventTypeOrderByWithRelationInput
     calendar?: CalendarOrderByWithRelationInput
   }
@@ -5993,6 +6129,8 @@ export namespace Prisma {
     duration?: IntFilter<"Event"> | number
     eventTypeId?: IntFilter<"Event"> | number
     calendarId?: StringFilter<"Event"> | string
+    createdAt?: DateTimeFilter<"Event"> | Date | string
+    updatedAt?: DateTimeFilter<"Event"> | Date | string
     eventType?: XOR<EventTypeScalarRelationFilter, EventTypeWhereInput>
     calendar?: XOR<CalendarScalarRelationFilter, CalendarWhereInput>
   }, "id">
@@ -6005,6 +6143,8 @@ export namespace Prisma {
     duration?: SortOrder
     eventTypeId?: SortOrder
     calendarId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: EventCountOrderByAggregateInput
     _avg?: EventAvgOrderByAggregateInput
     _max?: EventMaxOrderByAggregateInput
@@ -6023,6 +6163,8 @@ export namespace Prisma {
     duration?: IntWithAggregatesFilter<"Event"> | number
     eventTypeId?: IntWithAggregatesFilter<"Event"> | number
     calendarId?: StringWithAggregatesFilter<"Event"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Event"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Event"> | Date | string
   }
 
   export type EventTypeWhereInput = {
@@ -6032,6 +6174,8 @@ export namespace Prisma {
     id?: IntFilter<"EventType"> | number
     calendarId?: StringFilter<"EventType"> | string
     title?: StringFilter<"EventType"> | string
+    createdAt?: DateTimeFilter<"EventType"> | Date | string
+    updatedAt?: DateTimeFilter<"EventType"> | Date | string
     calendar?: XOR<CalendarScalarRelationFilter, CalendarWhereInput>
     Event?: EventListRelationFilter
   }
@@ -6040,6 +6184,8 @@ export namespace Prisma {
     id?: SortOrder
     calendarId?: SortOrder
     title?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     calendar?: CalendarOrderByWithRelationInput
     Event?: EventOrderByRelationAggregateInput
   }
@@ -6051,6 +6197,8 @@ export namespace Prisma {
     NOT?: EventTypeWhereInput | EventTypeWhereInput[]
     calendarId?: StringFilter<"EventType"> | string
     title?: StringFilter<"EventType"> | string
+    createdAt?: DateTimeFilter<"EventType"> | Date | string
+    updatedAt?: DateTimeFilter<"EventType"> | Date | string
     calendar?: XOR<CalendarScalarRelationFilter, CalendarWhereInput>
     Event?: EventListRelationFilter
   }, "id">
@@ -6059,6 +6207,8 @@ export namespace Prisma {
     id?: SortOrder
     calendarId?: SortOrder
     title?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: EventTypeCountOrderByAggregateInput
     _avg?: EventTypeAvgOrderByAggregateInput
     _max?: EventTypeMaxOrderByAggregateInput
@@ -6073,12 +6223,16 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"EventType"> | number
     calendarId?: StringWithAggregatesFilter<"EventType"> | string
     title?: StringWithAggregatesFilter<"EventType"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"EventType"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"EventType"> | Date | string
   }
 
   export type UserCreateInput = {
     email: string
     password: string
     avatar?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Calendar?: CalendarCreateNestedManyWithoutOwnerInput
   }
 
@@ -6087,6 +6241,8 @@ export namespace Prisma {
     email: string
     password: string
     avatar?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Calendar?: CalendarUncheckedCreateNestedManyWithoutOwnerInput
   }
 
@@ -6094,6 +6250,8 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Calendar?: CalendarUpdateManyWithoutOwnerNestedInput
   }
 
@@ -6102,6 +6260,8 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Calendar?: CalendarUncheckedUpdateManyWithoutOwnerNestedInput
   }
 
@@ -6110,12 +6270,16 @@ export namespace Prisma {
     email: string
     password: string
     avatar?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUpdateManyMutationInput = {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -6123,12 +6287,16 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type CalendarCreateInput = {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutCalendarInput
     Event?: EventCreateNestedManyWithoutCalendarInput
     eventType?: EventTypeCreateNestedManyWithoutCalendarInput
@@ -6139,6 +6307,8 @@ export namespace Prisma {
     link: string
     access?: boolean
     onwerId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventUncheckedCreateNestedManyWithoutCalendarInput
     eventType?: EventTypeUncheckedCreateNestedManyWithoutCalendarInput
   }
@@ -6147,6 +6317,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutCalendarNestedInput
     Event?: EventUpdateManyWithoutCalendarNestedInput
     eventType?: EventTypeUpdateManyWithoutCalendarNestedInput
@@ -6157,6 +6329,8 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
     onwerId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUncheckedUpdateManyWithoutCalendarNestedInput
     eventType?: EventTypeUncheckedUpdateManyWithoutCalendarNestedInput
   }
@@ -6166,12 +6340,16 @@ export namespace Prisma {
     link: string
     access?: boolean
     onwerId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type CalendarUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type CalendarUncheckedUpdateManyInput = {
@@ -6179,6 +6357,8 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
     onwerId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventCreateInput = {
@@ -6187,6 +6367,8 @@ export namespace Prisma {
     description?: string | null
     date: Date | string
     duration: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     eventType: EventTypeCreateNestedOneWithoutEventInput
     calendar: CalendarCreateNestedOneWithoutEventInput
   }
@@ -6199,6 +6381,8 @@ export namespace Prisma {
     duration: number
     eventTypeId: number
     calendarId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventUpdateInput = {
@@ -6207,6 +6391,8 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     eventType?: EventTypeUpdateOneRequiredWithoutEventNestedInput
     calendar?: CalendarUpdateOneRequiredWithoutEventNestedInput
   }
@@ -6219,6 +6405,8 @@ export namespace Prisma {
     duration?: IntFieldUpdateOperationsInput | number
     eventTypeId?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventCreateManyInput = {
@@ -6229,6 +6417,8 @@ export namespace Prisma {
     duration: number
     eventTypeId: number
     calendarId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventUpdateManyMutationInput = {
@@ -6237,6 +6427,8 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventUncheckedUpdateManyInput = {
@@ -6247,10 +6439,14 @@ export namespace Prisma {
     duration?: IntFieldUpdateOperationsInput | number
     eventTypeId?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventTypeCreateInput = {
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     calendar: CalendarCreateNestedOneWithoutEventTypeInput
     Event?: EventCreateNestedManyWithoutEventTypeInput
   }
@@ -6259,11 +6455,15 @@ export namespace Prisma {
     id?: number
     calendarId: string
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventUncheckedCreateNestedManyWithoutEventTypeInput
   }
 
   export type EventTypeUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     calendar?: CalendarUpdateOneRequiredWithoutEventTypeNestedInput
     Event?: EventUpdateManyWithoutEventTypeNestedInput
   }
@@ -6272,6 +6472,8 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUncheckedUpdateManyWithoutEventTypeNestedInput
   }
 
@@ -6279,16 +6481,22 @@ export namespace Prisma {
     id?: number
     calendarId: string
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventTypeUpdateManyMutationInput = {
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventTypeUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -6332,6 +6540,17 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
   export type CalendarListRelationFilter = {
     every?: CalendarWhereInput
     some?: CalendarWhereInput
@@ -6352,6 +6571,8 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     avatar?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
@@ -6363,6 +6584,8 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     avatar?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -6370,6 +6593,8 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     avatar?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
@@ -6428,6 +6653,20 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
   export type BoolFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel>
     not?: NestedBoolFilter<$PrismaModel> | boolean
@@ -6463,6 +6702,8 @@ export namespace Prisma {
     link?: SortOrder
     access?: SortOrder
     onwerId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type CalendarAvgOrderByAggregateInput = {
@@ -6474,6 +6715,8 @@ export namespace Prisma {
     link?: SortOrder
     access?: SortOrder
     onwerId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type CalendarMinOrderByAggregateInput = {
@@ -6481,6 +6724,8 @@ export namespace Prisma {
     link?: SortOrder
     access?: SortOrder
     onwerId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type CalendarSumOrderByAggregateInput = {
@@ -6493,17 +6738,6 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
-  }
-
-  export type DateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type EventTypeScalarRelationFilter = {
@@ -6524,6 +6758,8 @@ export namespace Prisma {
     duration?: SortOrder
     eventTypeId?: SortOrder
     calendarId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventAvgOrderByAggregateInput = {
@@ -6539,6 +6775,8 @@ export namespace Prisma {
     duration?: SortOrder
     eventTypeId?: SortOrder
     calendarId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventMinOrderByAggregateInput = {
@@ -6549,6 +6787,8 @@ export namespace Prisma {
     duration?: SortOrder
     eventTypeId?: SortOrder
     calendarId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventSumOrderByAggregateInput = {
@@ -6556,24 +6796,12 @@ export namespace Prisma {
     eventTypeId?: SortOrder
   }
 
-  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
   export type EventTypeCountOrderByAggregateInput = {
     id?: SortOrder
     calendarId?: SortOrder
     title?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventTypeAvgOrderByAggregateInput = {
@@ -6584,12 +6812,16 @@ export namespace Prisma {
     id?: SortOrder
     calendarId?: SortOrder
     title?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventTypeMinOrderByAggregateInput = {
     id?: SortOrder
     calendarId?: SortOrder
     title?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type EventTypeSumOrderByAggregateInput = {
@@ -6616,6 +6848,10 @@ export namespace Prisma {
 
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
   export type CalendarUpdateManyWithoutOwnerNestedInput = {
@@ -6768,10 +7004,6 @@ export namespace Prisma {
     connect?: CalendarWhereUniqueInput
   }
 
-  export type DateTimeFieldUpdateOperationsInput = {
-    set?: Date | string
-  }
-
   export type EventTypeUpdateOneRequiredWithoutEventNestedInput = {
     create?: XOR<EventTypeCreateWithoutEventInput, EventTypeUncheckedCreateWithoutEventInput>
     connectOrCreate?: EventTypeCreateOrConnectWithoutEventInput
@@ -6883,6 +7115,17 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -6955,30 +7198,6 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type NestedBoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
-  }
-
-  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
-  }
-
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -6993,10 +7212,25 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
   export type CalendarCreateWithoutOwnerInput = {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventCreateNestedManyWithoutCalendarInput
     eventType?: EventTypeCreateNestedManyWithoutCalendarInput
   }
@@ -7005,6 +7239,8 @@ export namespace Prisma {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventUncheckedCreateNestedManyWithoutCalendarInput
     eventType?: EventTypeUncheckedCreateNestedManyWithoutCalendarInput
   }
@@ -7043,12 +7279,16 @@ export namespace Prisma {
     link?: StringFilter<"Calendar"> | string
     access?: BoolFilter<"Calendar"> | boolean
     onwerId?: IntFilter<"Calendar"> | number
+    createdAt?: DateTimeFilter<"Calendar"> | Date | string
+    updatedAt?: DateTimeFilter<"Calendar"> | Date | string
   }
 
   export type UserCreateWithoutCalendarInput = {
     email: string
     password: string
     avatar?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUncheckedCreateWithoutCalendarInput = {
@@ -7056,6 +7296,8 @@ export namespace Prisma {
     email: string
     password: string
     avatar?: string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserCreateOrConnectWithoutCalendarInput = {
@@ -7069,6 +7311,8 @@ export namespace Prisma {
     description?: string | null
     date: Date | string
     duration: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     eventType: EventTypeCreateNestedOneWithoutEventInput
   }
 
@@ -7079,6 +7323,8 @@ export namespace Prisma {
     date: Date | string
     duration: number
     eventTypeId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventCreateOrConnectWithoutCalendarInput = {
@@ -7093,12 +7339,16 @@ export namespace Prisma {
 
   export type EventTypeCreateWithoutCalendarInput = {
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventCreateNestedManyWithoutEventTypeInput
   }
 
   export type EventTypeUncheckedCreateWithoutCalendarInput = {
     id?: number
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventUncheckedCreateNestedManyWithoutEventTypeInput
   }
 
@@ -7127,6 +7377,8 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateWithoutCalendarInput = {
@@ -7134,6 +7386,8 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     avatar?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventUpsertWithWhereUniqueWithoutCalendarInput = {
@@ -7163,6 +7417,8 @@ export namespace Prisma {
     duration?: IntFilter<"Event"> | number
     eventTypeId?: IntFilter<"Event"> | number
     calendarId?: StringFilter<"Event"> | string
+    createdAt?: DateTimeFilter<"Event"> | Date | string
+    updatedAt?: DateTimeFilter<"Event"> | Date | string
   }
 
   export type EventTypeUpsertWithWhereUniqueWithoutCalendarInput = {
@@ -7188,10 +7444,14 @@ export namespace Prisma {
     id?: IntFilter<"EventType"> | number
     calendarId?: StringFilter<"EventType"> | string
     title?: StringFilter<"EventType"> | string
+    createdAt?: DateTimeFilter<"EventType"> | Date | string
+    updatedAt?: DateTimeFilter<"EventType"> | Date | string
   }
 
   export type EventTypeCreateWithoutEventInput = {
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
     calendar: CalendarCreateNestedOneWithoutEventTypeInput
   }
 
@@ -7199,6 +7459,8 @@ export namespace Prisma {
     id?: number
     calendarId: string
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventTypeCreateOrConnectWithoutEventInput = {
@@ -7210,6 +7472,8 @@ export namespace Prisma {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutCalendarInput
     eventType?: EventTypeCreateNestedManyWithoutCalendarInput
   }
@@ -7219,6 +7483,8 @@ export namespace Prisma {
     link: string
     access?: boolean
     onwerId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     eventType?: EventTypeUncheckedCreateNestedManyWithoutCalendarInput
   }
 
@@ -7240,6 +7506,8 @@ export namespace Prisma {
 
   export type EventTypeUpdateWithoutEventInput = {
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     calendar?: CalendarUpdateOneRequiredWithoutEventTypeNestedInput
   }
 
@@ -7247,6 +7515,8 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type CalendarUpsertWithoutEventInput = {
@@ -7264,6 +7534,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutCalendarNestedInput
     eventType?: EventTypeUpdateManyWithoutCalendarNestedInput
   }
@@ -7273,6 +7545,8 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
     onwerId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     eventType?: EventTypeUncheckedUpdateManyWithoutCalendarNestedInput
   }
 
@@ -7280,6 +7554,8 @@ export namespace Prisma {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
     owner: UserCreateNestedOneWithoutCalendarInput
     Event?: EventCreateNestedManyWithoutCalendarInput
   }
@@ -7289,6 +7565,8 @@ export namespace Prisma {
     link: string
     access?: boolean
     onwerId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     Event?: EventUncheckedCreateNestedManyWithoutCalendarInput
   }
 
@@ -7303,6 +7581,8 @@ export namespace Prisma {
     description?: string | null
     date: Date | string
     duration: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
     calendar: CalendarCreateNestedOneWithoutEventInput
   }
 
@@ -7313,6 +7593,8 @@ export namespace Prisma {
     date: Date | string
     duration: number
     calendarId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventCreateOrConnectWithoutEventTypeInput = {
@@ -7340,6 +7622,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutCalendarNestedInput
     Event?: EventUpdateManyWithoutCalendarNestedInput
   }
@@ -7349,6 +7633,8 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
     onwerId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUncheckedUpdateManyWithoutCalendarNestedInput
   }
 
@@ -7372,12 +7658,16 @@ export namespace Prisma {
     id?: string
     link: string
     access?: boolean
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type CalendarUpdateWithoutOwnerInput = {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUpdateManyWithoutCalendarNestedInput
     eventType?: EventTypeUpdateManyWithoutCalendarNestedInput
   }
@@ -7386,6 +7676,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUncheckedUpdateManyWithoutCalendarNestedInput
     eventType?: EventTypeUncheckedUpdateManyWithoutCalendarNestedInput
   }
@@ -7394,6 +7686,8 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     link?: StringFieldUpdateOperationsInput | string
     access?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventCreateManyCalendarInput = {
@@ -7403,11 +7697,15 @@ export namespace Prisma {
     date: Date | string
     duration: number
     eventTypeId: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventTypeCreateManyCalendarInput = {
     id?: number
     title: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventUpdateWithoutCalendarInput = {
@@ -7416,6 +7714,8 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     eventType?: EventTypeUpdateOneRequiredWithoutEventNestedInput
   }
 
@@ -7426,6 +7726,8 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
     eventTypeId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventUncheckedUpdateManyWithoutCalendarInput = {
@@ -7435,22 +7737,30 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
     eventTypeId?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventTypeUpdateWithoutCalendarInput = {
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUpdateManyWithoutEventTypeNestedInput
   }
 
   export type EventTypeUncheckedUpdateWithoutCalendarInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     Event?: EventUncheckedUpdateManyWithoutEventTypeNestedInput
   }
 
   export type EventTypeUncheckedUpdateManyWithoutCalendarInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventCreateManyEventTypeInput = {
@@ -7460,6 +7770,8 @@ export namespace Prisma {
     date: Date | string
     duration: number
     calendarId: string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type EventUpdateWithoutEventTypeInput = {
@@ -7468,6 +7780,8 @@ export namespace Prisma {
     description?: NullableStringFieldUpdateOperationsInput | string | null
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     calendar?: CalendarUpdateOneRequiredWithoutEventNestedInput
   }
 
@@ -7478,6 +7792,8 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type EventUncheckedUpdateManyWithoutEventTypeInput = {
@@ -7487,6 +7803,8 @@ export namespace Prisma {
     date?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
     calendarId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "./__client_generated__"
@@ -15,12 +9,16 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
+
   email    String
   password String
   avatar   String?
 
   Calendar Calendar[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("users")
 }
@@ -35,6 +33,9 @@ model Calendar {
 
   Event     Event[]
   eventType EventType[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("calendars")
 }
@@ -52,6 +53,9 @@ model Event {
   calendarId String   @map("calendar_id")
   calendar   Calendar @relation(fields: [calendarId], references: [id])
 
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
   @@map("events")
 }
 
@@ -62,6 +66,9 @@ model EventType {
 
   calendar Calendar @relation(fields: [calendarId], references: [id])
   Event    Event[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("events_type")
 }

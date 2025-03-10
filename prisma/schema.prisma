@@ -9,12 +9,16 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
+  id Int @id @default(autoincrement())
+
   email    String
   password String
   avatar   String?
 
   Calendar Calendar[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("users")
 }
@@ -29,6 +33,9 @@ model Calendar {
 
   Event     Event[]
   eventType EventType[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("calendars")
 }
@@ -46,6 +53,9 @@ model Event {
   calendarId String   @map("calendar_id")
   calendar   Calendar @relation(fields: [calendarId], references: [id])
 
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
   @@map("events")
 }
 
@@ -56,6 +66,9 @@ model EventType {
 
   calendar Calendar @relation(fields: [calendarId], references: [id])
   Event    Event[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("events_type")
 }

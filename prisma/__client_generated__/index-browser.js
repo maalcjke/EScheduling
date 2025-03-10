@@ -121,14 +121,18 @@ exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   email: 'email',
   password: 'password',
-  avatar: 'avatar'
+  avatar: 'avatar',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.CalendarScalarFieldEnum = {
   id: 'id',
   link: 'link',
   access: 'access',
-  onwerId: 'onwerId'
+  onwerId: 'onwerId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.EventScalarFieldEnum = {
@@ -138,13 +142,17 @@ exports.Prisma.EventScalarFieldEnum = {
   date: 'date',
   duration: 'duration',
   eventTypeId: 'eventTypeId',
-  calendarId: 'calendarId'
+  calendarId: 'calendarId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.EventTypeScalarFieldEnum = {
   id: 'id',
   calendarId: 'calendarId',
-  title: 'title'
+  title: 'title',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {
