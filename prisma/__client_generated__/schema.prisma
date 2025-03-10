@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./__client_generated__"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String
+  password String
+  avatar   String?
+
+  Calendar Calendar[]
+
+  @@map("users")
+}
+
+model Calendar {
+  id     String  @id @default(uuid())
+  link   String  @unique
+  access Boolean @default(false)
+
+  onwerId Int
+  owner   User @relation(fields: [onwerId], references: [id])
+
+  Event     Event[]
+  eventType EventType[]
+
+  @@map("calendars")
+}
+
+model Event {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  date        DateTime
+  duration    Int
+
+  eventTypeId Int       @map("event_id")
+  eventType   EventType @relation(fields: [eventTypeId], references: [id])
+
+  calendarId String   @map("calendar_id")
+  calendar   Calendar @relation(fields: [calendarId], references: [id])
+
+  @@map("events")
+}
+
+model EventType {
+  id         Int    @id @default(autoincrement())
+  calendarId String
+  title      String
+
+  calendar Calendar @relation(fields: [calendarId], references: [id])
+  Event    Event[]
+
+  @@map("events_type")
+}
