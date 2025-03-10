@@ -1,6 +1,12 @@
-<h1 align="center">EScheduling</h1>
+<table>
+  <tr>
+    <td><img src="https://img.freepik.com/free-vector/gradient-red-calendar_78370-3839.jpg" alt="Логотип" width="50"></td>
+    <td><h1>EScheduling</h1></td>
+    <td><h4>Сервис, который помогает записываться на встречи, мероприятия и созвоны без долгого согласования</h4></td>
+  </tr>
+</table>
 
-Сервис, который помогает записываться на встречи, мероприятия и созвоны без долгого согласования
+
 
 ## Tech Stack
 -   **NextJS**: ядро для фронта.
